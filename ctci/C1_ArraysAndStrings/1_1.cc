@@ -60,6 +60,27 @@ bool has_unique_chars_bit_vector(const string& str) {
 
 int main() {
     assert(has_unique_chars_set("abc"));
+    assert(has_unique_chars_set(""));
+    assert(!has_unique_chars_set("aa"));
+    assert(has_unique_chars_set("a"));
+    assert(!has_unique_chars_set("abcdefa"));
+    assert(!has_unique_chars_set("aba"));
+    assert(has_unique_chars_set("abcdefgh"));
 
+    assert(has_unique_chars_charset_array("abc"));
+    assert(has_unique_chars_charset_array(""));
+    assert(!has_unique_chars_charset_array("aa"));
+    assert(has_unique_chars_charset_array("a"));
+    assert(!has_unique_chars_charset_array("abcdefa"));
+    assert(!has_unique_chars_charset_array("aba"));
+    assert(has_unique_chars_charset_array("abcdefgh"));
+
+    assert(has_unique_chars_bit_vector("abc"));
+    assert(has_unique_chars_bit_vector(""));
+    assert(!has_unique_chars_bit_vector("aa"));
+    assert(has_unique_chars_bit_vector("a"));
+    assert(!has_unique_chars_bit_vector("abcdefa"));
+    assert(!has_unique_chars_bit_vector("aba"));
+    assert(has_unique_chars_bit_vector("abcdefgh"));
     return 0;
 }
