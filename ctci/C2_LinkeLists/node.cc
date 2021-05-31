@@ -64,3 +64,8 @@ void print(Node *head) {
     }
     cout << endl;
 }
+
+void arr_to_list(Node **headptr, int A[], int n) {
+    for (int i = n-1; i >= 0; --i)
+        push_front(headptr, A[i]);
+}
